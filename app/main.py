@@ -43,7 +43,7 @@ class Distance:
             return self.km >= other.km
         return self.km >= other
 
-    def __iadd__(self, other: Union[int, float]) -> Distance:
+    def __iadd__(self, other: Union[Distance, int, float]) -> Distance:
         if isinstance(other, Distance):
             self.km += other.km
         elif isinstance(other, (int, float)):
